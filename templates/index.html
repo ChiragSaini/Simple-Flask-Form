@@ -1,0 +1,18 @@
+{% extends "base.html"%}
+
+{% block content %}
+
+{% if breed %}
+    <h1>The breed you entered is {{breed}}</h1>
+    <h2>Update it in form below:</h2>
+{% else %}
+    <h1>Please enter your breed</h1>
+{% endif %}
+
+<form method="post">
+  {{form.hidden_tag()}}
+  {{form.breed.label}}{{form.breed()}}
+  {{form.submit(x)}}
+
+</form>
+{% endblock %}
